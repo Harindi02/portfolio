@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harindi Gunarathne - Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: '#4a9eff',
+                        'accent-hover': '#357abd',
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 20s linear infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4a9eff;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .glass-nav {
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Digital Aurora Background */
+        .aurora-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .aurora-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.4;
+            animation: float 10s ease-in-out infinite;
+        }
+
+        /* Grid Pattern */
+        .grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(128, 128, 128, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(128, 128, 128, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        /* Text Gradient */
+        .text-gradient {
+            background: linear-gradient(to right, #60a5fa, #22d3ee, #2dd4bf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+ 
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold font-heading tracking-tight">HG<span class="text-blue-400">.</span></a>
+            
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#home" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Home</a>
+                <a href="#about" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">About</a>
+                <a href="#skills" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Projects</a>
+                <a href="#contact" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
+                <a href="cv/Harindi_Gunarathne_CV.pdf" target="_blank" class="px-5 py-2 text-xs font-semibold border border-white/10 rounded-full hover:bg-white/5 transition-all">Resume</a>
+            </div>
+ 
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/95 backdrop-blur-xl border-t border-white/10 absolute w-full">
+            <div class="flex flex-col p-6 gap-4">
+                <a href="#home" class="text-lg text-gray-300">Home</a>
+                <a href="#about" class="text-lg text-gray-300">About</a>
+                <a href="#skills" class="text-lg text-gray-300">Skills</a>
+                <a href="#projects" class="text-lg text-gray-300">Projects</a>
+                <a href="#contact" class="text-lg text-gray-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+ 
+
+</body> 
+</html> 
