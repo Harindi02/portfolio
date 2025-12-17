@@ -567,6 +567,20 @@
             </div>
         </div>
     </section>
+    
+    <!-- Footer -->
+    <footer class="py-8 bg-black border-t border-white/10 text-center text-gray-500 text-sm">
+        <p>&copy; 2025 Harindi Gunarathne. All rights reserved.</p>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth'});
+        });});
+    </script>
 
 
 </body> 
